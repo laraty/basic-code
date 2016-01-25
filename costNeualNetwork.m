@@ -11,7 +11,7 @@ for i = 1:m
   Y(i,:) = I(y(i),:);
 end
 
-% ============== Include your code here =======================
+
 % A1: m x (n+1)
 A1=zeros(m,n+1);
 A1(:,2:n+1)=X;
@@ -29,7 +29,7 @@ A3=sigmoid(Z3);
 H=A3;
 % Cost function J
 cost=(1/m)*sum(sum((-Y'* log(H) - (1 - Y)'* log(1-H))));
-% =============================================================
+
 
 % Regularization 
 reg = (lambda/(2*m))*(sum(sum(Theta1(:,2:end).^2,2))+sum(sum(Theta2(:,2:end).^2,2)));
